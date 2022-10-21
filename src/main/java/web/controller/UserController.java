@@ -8,7 +8,7 @@ import web.model.User;
 import web.service.UserService;
 
 @Controller
-@RequestMapping("/listOfUsers")
+@RequestMapping("/users")
 public class UserController {
     private final UserService userService;
 
@@ -32,7 +32,7 @@ public class UserController {
     @PostMapping("/edit")
     public String editUser(@ModelAttribute("user") User user) {
         userService.edit(user);
-        return "redirect:/listOfUsers";
+        return "redirect:/users";
     }
 
     @GetMapping("/add")
@@ -44,13 +44,13 @@ public class UserController {
     @PostMapping("/add")
     public String addUser(@ModelAttribute("user") User user) {
         userService.add(user);
-        return "redirect:/listOfUsers";
+        return "redirect:/users";
     }
 
     @DeleteMapping("/{id}")
     public String deleteUser(@PathVariable("id") int id) {
         userService.delete(id);
-        return "redirect:/listOfUsers";
+        return "redirect:/users";
     }
 }
 

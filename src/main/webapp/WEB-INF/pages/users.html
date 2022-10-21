@@ -24,10 +24,8 @@
         <td th:text="${user.getAge()}"></td>
         <td>
 
-            <a th:href="@{/listOfUsers/edit/{id}(id=${user.getId()})}" th:object="${user}">EditPage</a>
-<!--            <a th:href="@{/listOfUsers/delete/{id}(id=${user.getId()})}" th:object="${user}">DeletePage</a>-->
-            <form  th:method="DELETE" th:action="@{/listOfUsers/{id}(id=${user.getId()})}" th:object="${user}">
-<!--                <input type="submit" value="Delete"/>-->
+            <a th:href="@{/users/edit/{id}(id=${user.getId()})}" th:object="${user}">EditPage</a>
+            <form  th:method="DELETE" th:action="@{/users/{id}(id=${user.getId()})}" th:object="${user}">
                 <button class="btn btn-dark" type="submit">Delete</button>
             </form>
 
@@ -37,7 +35,7 @@
 
 <h1>Add</h1>
 <p>
-    <a href="/listOfUsers/add">Add new user</a>
+    <a href="/users/add">Add new user</a>
 </p>
 
 </body>
