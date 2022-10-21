@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
-      xmlns:c="http://java.sun.com/xml/ns/javaee">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,9 +8,9 @@
 </head>
 <body>
 
-<form th:method="POST" th:action ="@{/edit}" th:object="${user}">
-<!--    {id}(id=${user.getId()})}-->
+<form th:method="POST" th:action ="@{/listOfUsers/edit}" th:object="${user}">
 
+    <input type="hidden" th:field="*{id}" id="id"/>
     <label for="name">Enter name: </label>
     <input type="text" th:field="*{name}" id="name"/>
 
@@ -28,30 +27,6 @@
     <br>
 
     <input type="submit" value="EditUser"/>
-
-
-
-<!--<c:url value="/edit" var="var"/>-->
-<!--<form action="${var}" method="POST">-->
-<!--    <input type="hidden" name="id" value="${user.id}">-->
-
-<!--    <label for="name">Enter name: </label>-->
-<!--        <input type="text" name="name" id="name">-->
-
-
-<!--        <label for="lastName">Enter lasName: </label>-->
-<!--        <input type="text" name="lastName" id="lastName">-->
-
-
-<!--        <label for="age">Enter age: </label>-->
-<!--        <input type="text" name="age" id="age">-->
-
-
-<!--        <input type="submit" value="EditUser">-->
-
-
-
-
 
 
 </form>

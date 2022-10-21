@@ -8,8 +8,7 @@
 <body>
 
 
-<form th:method="POST" th:action ="@{/add}" th:object="${user}">
-    <!--    {id}(id=${user.getId()})}-->
+<form th:method="POST" th:action ="@{/listOfUsers/add}" th:object="${user}">
 
     <label for="name">Enter name: </label>
     <input type="text" th:field="*{name}" id="name"/>

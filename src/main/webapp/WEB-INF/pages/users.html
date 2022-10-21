@@ -24,44 +24,21 @@
         <td th:text="${user.getAge()}"></td>
         <td>
 
-            <a th:href="@{/edit/{id}(id=${user.getId()})}" th:object="${user}">EditPage</a>
-            <a th:href="@{/delete/{id}(id=${user.getId()})}" th:object="${user}">DeletePage</a>
-<!--            <a href="/edit/${user.id}">edit</a>-->
-<!--            <a href="/delete/${user.id}">delete</a>-->
+            <a th:href="@{/listOfUsers/edit/{id}(id=${user.getId()})}" th:object="${user}">EditPage</a>
+<!--            <a th:href="@{/listOfUsers/delete/{id}(id=${user.getId()})}" th:object="${user}">DeletePage</a>-->
+            <form  th:method="DELETE" th:action="@{/listOfUsers/{id}(id=${user.getId()})}" th:object="${user}">
+<!--                <input type="submit" value="Delete"/>-->
+                <button class="btn btn-dark" type="submit">Delete</button>
+            </form>
+
         </td>
     </tr>
 </table>
 
 <h1>Add</h1>
 <p>
-    <a href="/add">Add new user</a>
+    <a href="/listOfUsers/add">Add new user</a>
 </p>
-
-
-<!--<h2>Users</h2>-->
-<!--<table>-->
-<!--    <tr>-->
-<!--        <th>id</th>-->
-<!--        <th>name</th>-->
-<!--        <th>lasName</th>-->
-<!--        <th>age</th>-->
-<!--        <th>action</th>-->
-<!--    </tr>-->
-<!--    <c:forEach var="user" items="${userlist}">-->
-<!--        <tr>-->
-<!--            <td>${user.id}</td>-->
-<!--            <td>${user.name}</td>-->
-<!--            <td>${user.lastName}</td>-->
-<!--            <td>${user.age}</td>-->
-<!--            <td>-->
-<!--                <a href="/edit/${user.id}">edit</a>-->
-<!--                <a href="/delete/${user.id}">delete</a>-->
-<!--            </td>-->
-<!--        </tr>-->
-<!--    </c:forEach>-->
-<!--</table>-->
-
-
 
 </body>
 </html>

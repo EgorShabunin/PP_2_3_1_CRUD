@@ -11,6 +11,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="PP_2_3_1_CRUD" />
         <module name="(2)_PP_2_3_1_CRUD" />
+        <module name="(3)_PP_2_3_1_CRUD" />
+        <module name="(5)_PP_2_3_1_CRUD" />
       </profile>
     </annotationProcessing>
   </component>

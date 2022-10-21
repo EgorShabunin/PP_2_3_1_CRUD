@@ -3,19 +3,18 @@ package web.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="users")
+@Table(name = "users")
 public class User {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name="name")
+    @Column(name = "name")
     private String name;
-    @Column(name="lastName")
+    @Column(name = "lastName")
     private String lastName;
-    @Column(name="age")
+    @Column(name = "age")
     private int age;
-
 
     public User() {
     }
@@ -27,6 +26,7 @@ public class User {
     public String getName() {
         return name;
     }
+
     public String getLastName() {
         return lastName;
     }
@@ -35,8 +35,6 @@ public class User {
         return age;
     }
 
-
-
     public void setId(int id) {
         this.id = id;
     }
@@ -44,21 +42,12 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                '}';
     }
 }
